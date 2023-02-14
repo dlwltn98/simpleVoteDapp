@@ -36,7 +36,7 @@ contract vote {
     }
 
     // candidate
-    function addCandidate(string memory _name) public chkLive onlyOwner { // 수정
+    function addCandidate(string calldata _name) public chkLive onlyOwner { // 수정
         require(candidateList.length < 5);
 
         candidateList.push(Candidate(_name, 0));
